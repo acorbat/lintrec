@@ -16,15 +16,11 @@ classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Scientific Community"
 ]
-dependencies = [
-  'pandera >= 0.16',
-  'pandas >= 1.0'
-]
+dynamic = ["dependencies", "optional-dependencies", "version"]
 
-[project.optional-dependencies]
-dev = [
-    "pre-commit"
-]
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+optional-dependencies.test = {file = "requirements.test.txt"}
 
 [build-system]
 requires = ["setuptools", "wheel", "setuptools_scm[toml]"]
