@@ -3,7 +3,7 @@ name = "lintrec"
 description = "Small package containing useful tools to analyze and interpret lineage tracing experiments."
 version = "0.1.0"
 authors = [
-    {name = "A. Corbat", email = "acorbat@ki.se"}
+  {name = "A. Corbat", email = "acorbat@ki.se"}
 ]
 readme = "README.md"
 license = {file = "LICENSE.txt"}
@@ -15,6 +15,9 @@ maintainers = [
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Scientific Community"
+]
+dependencies = [
+  'pandera >= 0.16'
 ]
 
 [project.optional-dependencies]
