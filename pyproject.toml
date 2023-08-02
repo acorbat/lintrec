@@ -17,7 +17,8 @@ classifiers = [
   "Intended Audience :: Scientific Community"
 ]
 dependencies = [
-  'pandera >= 0.16'
+  'pandera >= 0.16',
+  'pandas >= 1.0'
 ]
 
 [project.optional-dependencies]
