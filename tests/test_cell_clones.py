@@ -26,6 +26,16 @@ class TestCellClones:
 
     def test_ok_df(self):
         df = pd.DataFrame(
-            [["a", "1"], ["a", "2"], ["b", "2"]], columns=["cell_type", "clone"]
+            [["a", "1"], ["a", "2"], ["b", "2"]],
+            columns=["cell_type", "clone"],
+            dtype="category",
+        )
+        CellClones(df)
+
+    def test_ok_df_with_numbers(self):
+        df = pd.DataFrame(
+            [["a", 1], ["a", 2], ["b", 2]],
+            columns=["cell_type", "clone"],
+            dtype="category",
         )
         CellClones(df)
